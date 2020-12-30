@@ -50,10 +50,15 @@ def compare_heroes(comparison_parameter, heroes_list):
         return top_hero[0]
 
 
-my_heroes_list = {'Thanos', 'Captain America', 'A-Bomb'}
-my_comparison_parameter = 'intelligence'
-number_one = compare_heroes(my_comparison_parameter, my_heroes_list)
-if number_one is not None:
-    print(f'{list(number_one.keys())[0]} has best {my_comparison_parameter} in this Gang')
-else:
-    print('There is no hero in your list')
+def best_hero():
+    my_heroes_list = {'Thanos', 'Captain America', 'A-Bomb'}  # вводить с рук слишком долго
+    my_comparison_parameter = 'intelligence'
+    number_one = compare_heroes(my_comparison_parameter, my_heroes_list)
+    if number_one is not None:
+        print(f'{list(number_one.keys())[0]} has best {my_comparison_parameter} in this Gang')
+    else:
+        print('There is no hero in your list')
+
+
+if __name__ == '__main__':
+    best_hero()
